@@ -1,6 +1,6 @@
 {
   "name": "island-qqwry-database",
-  "version": "1.0.0",
+  "version": "2023.02.15",
   "description": "Island (小蓝岛) 纯真 IP 数据库 qqwry.dat 解析",
   "main": "qqwry/index.js",
   "scripts": {
