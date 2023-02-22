@@ -1,6 +1,6 @@
 {
-  "name": "island-qqwry-database",
-  "version": "2023.02.15",
+  "name": "@blueislandx/island-qqwry-database",
+  "version": "2023.2.15",
   "description": "Island (小蓝岛) 纯真 IP 数据库 qqwry.dat 解析",
   "main": "qqwry/index.js",
   "scripts": {
@@ -26,5 +26,8 @@
   "devDependencies": {
     "@types/gbk.js": "^0.3.0",
     "@types/node": "^18.13.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }

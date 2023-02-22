@@ -8,24 +8,24 @@
 
 <div align="center">
 
-[![npm version](https://img.shields.io/npm/v/island-qqwry-database.svg?style=flat-square)](https://www.npmjs.org/package/island-qqwry-database)
-[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=island-qqwry-database&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=island-qqwry-database)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/island-qqwry-database?style=flat-square)](https://bundlephobia.com/package/island-qqwry-database@latest)
-[![npm downloads](https://img.shields.io/npm/dm/island-qqwry-database.svg?style=flat-square)](https://npm-stat.com/charts.html?package=island-qqwry-database)
-[![Known Vulnerabilities](https://snyk.io/test/npm/island-qqwry-database/badge.svg?style=flat-square)](https://snyk.io/test/npm/island-qqwry-database)
+[![npm version](https://img.shields.io/npm/v/@blueislandx/island-qqwry-database.svg?style=flat-square)](https://www.npmjs.org/package/@blueislandx/island-qqwry-database)
+[![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=@blueislandx/island-qqwry-database&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=@blueislandx/island-qqwry-database)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@blueislandx/island-qqwry-database?style=flat-square)](https://bundlephobia.com/package/@blueislandx/island-qqwry-database@latest)
+[![npm downloads](https://img.shields.io/npm/dm/@blueislandx/island-qqwry-database.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@blueislandx/island-qqwry-database)
+[![Known Vulnerabilities](https://snyk.io/test/npm/@blueislandx/island-qqwry-database/badge.svg?style=flat-square)](https://snyk.io/test/npm/@blueislandx/island-qqwry-database)
 
 </div>
 
 ## 1.如何安装
 ```
-npm i island-qqwry-database --save
+npm i @blueislandx/island-qqwry-database --save
 ```
 
 ## 2.如何使用
 
 查询 IP 地址:
 ```TypeScript
-import qqwry from 'island-qqwry-database';
+import qqwry from '@blueislandx/island-qqwry-database';
 
 const client = qqwry.database.Client(<是否开启极速模式>, '<数据库文件 (默认使用项目自带)>');
 
@@ -34,7 +34,7 @@ client.searchIP('<IP 地址>');
 
 IP 转数字:
 ```TypeScript
-import qqwry from 'island-qqwry-database';
+import qqwry from '@blueislandx/island-qqwry-database';
 
 const util = qqwry.database.Util;
 
@@ -43,7 +43,7 @@ util.ip2Int('<IP 地址>');
 
 数字转 IP:
 ```TypeScript
-import qqwry from 'island-qqwry-database';
+import qqwry from '@blueislandx/island-qqwry-database';
 
 const util = qqwry.database.Util;
 
@@ -52,7 +52,7 @@ util.int2IP(<IP 地址 (数字格式)>);
 
 字节序转换
 ```TypeScript
-import qqwry from 'island-qqwry-database';
+import qqwry from '@blueislandx/island-qqwry-database';
 
 const util = qqwry.database.Util;
 
