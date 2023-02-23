@@ -32,6 +32,15 @@ const client = qqwry.database.Client(<是否开启极速模式>, '<数据库文�
 client.searchIP('<IP 地址>');
 ```
 
+查询 IP 段:
+```TypeScript
+import qqwry from '@blueislandx/island-qqwry-database';
+
+const client = qqwry.database.Client(<是否开启极速模式>, '<数据库文件 (默认使用项目自带)>');
+
+client.searchIPScope('<IP 段起始地址>', '<IP 段终止地址>');
+```
+
 IP 转数字:
 ```TypeScript
 import qqwry from '@blueislandx/island-qqwry-database';

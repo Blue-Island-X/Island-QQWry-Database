@@ -7,6 +7,10 @@ const util = qqwry.database.Util;
 console.log(client.searchIP('223.5.5.5'));
 console.log(client.searchIP('114.114.114.114'));
 
+// 查询 IP 段
+console.log(client.searchIPScope('8.8.8.0', '8.8.8.8'));
+console.log(client.searchIPScope('58.87.96.0', '58.87.99.255'));
+
 // IP 转数字
 console.log(util.ip2Int('114.114.114.114'));
 

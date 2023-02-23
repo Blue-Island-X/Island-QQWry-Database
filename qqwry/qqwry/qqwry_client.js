@@ -58,5 +58,13 @@ class QQWryClient {
         ipInfo.int = ip;
         return ipInfo;
     }
+    searchIPScope(start, end) {
+        const ip1 = qqwry_util_1.QQWryUtil.ip2Int(start);
+        const ip2 = qqwry_util_1.QQWryUtil.ip2Int(end);
+        const ip1Offset = qqwry_util_1.QQWryUtil.locateIP(this.buffer, ip1, this.ipStart, this.ipEnd);
+        const ip2Offset = qqwry_util_1.QQWryUtil.locateIP(this.buffer, ip2, this.ipStart, this.ipEnd);
+        const ipRangeInfo = qqwry_util_1.QQWryUtil.queryIPRangeInfo(this.buffer, ip1Offset, ip2Offset);
+        return ipRangeInfo;
+    }
 }
 exports.QQWryClient = QQWryClient;

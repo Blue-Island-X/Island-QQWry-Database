@@ -1,7 +1,7 @@
 import * as gbk from 'gbk.js';
 
 import { AbstractBuffer } from '../common/abstract_buffer';
-import { IPInfo } from '../common/interfaces';
+import { IPInfo, IPRangeInfo } from '../common/interfaces';
 
 export class QQWryUtil {
     static REDIRECT_MODE_1: number = 1;
@@ -77,6 +77,32 @@ export class QQWryUtil {
         }
 
         return ipInfo;
+    }
+
+    /**
+     * 通过 IP 段偏移量查找 IP 段详细信息
+     * @param buffer 实现 AbstractBuffer 的实例
+     * @param ip1 IP 段起始偏移量
+     * @param ip2 IP 段终止偏移量
+     */
+    static queryIPRangeInfo(buffer: InstanceType<typeof AbstractBuffer>, ip1: number, ip2: number) {
+        const ipRangeList : IPRangeInfo[] = [];
+
+        for (var i = ip1;  i <= ip2; i += this.IP_RECORD_LENGTH) {
+            const ipInfo = this.queryIPInfo(buffer, i);
+            const ipRangeInfo = {} as IPRangeInfo;
+            
+            ipRangeInfo.beginInt = buffer.readUIntLE(i, 4);
+            ipRangeInfo.endInt = buffer.readUIntLE(buffer.readUIntLE(i + 4, 3), 4);
+            ipRangeInfo.beginIP = this.int2IP(ipRangeInfo.beginInt);
+            ipRangeInfo.endIP = this.int2IP(ipRangeInfo.endInt);
+            ipRangeInfo.country = ipInfo.country;
+            ipRangeInfo.area = ipInfo.area;
+
+            ipRangeList.push(ipRangeInfo);
+        }
+
+        return ipRangeList;
     }
 
     /**

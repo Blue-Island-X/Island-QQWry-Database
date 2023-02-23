@@ -44,4 +44,15 @@ export class QQWryClient {
 
         return ipInfo;
     }
+
+    searchIPScope(start: string, end: string) {
+        const ip1 = QQWryUtil.ip2Int(start);
+        const ip2 = QQWryUtil.ip2Int(end);
+
+        const ip1Offset = QQWryUtil.locateIP(this.buffer, ip1, this.ipStart, this.ipEnd);
+        const ip2Offset = QQWryUtil.locateIP(this.buffer, ip2, this.ipStart, this.ipEnd);
+
+        const ipRangeInfo = QQWryUtil.queryIPRangeInfo(this.buffer, ip1Offset, ip2Offset);
+        return ipRangeInfo;
+    }
 }
