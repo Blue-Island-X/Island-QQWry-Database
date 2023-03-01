@@ -1,9 +1,9 @@
 import * as path from 'path';
 
-import { AbstractBuffer } from '../common/abstract_buffer';
-import { FileBuffer } from '../buffer/file_buffer';
-import { MemoryBuffer } from '../buffer/memory_buffer';
-import { QQWryUtil } from './qqwry_util';
+import { AbstractBuffer } from '../common/abstract.buffer';
+import { FileBuffer } from '../buffer/file.buffer';
+import { MemoryBuffer } from '../buffer/memory.buffer';
+import { QQWryUtil } from './qqwry.util';
 
 export class QQWryClient {
     path: string;

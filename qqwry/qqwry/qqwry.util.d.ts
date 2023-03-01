@@ -1,4 +1,4 @@
-import { AbstractBuffer } from '../common/abstract_buffer';
+import { AbstractBuffer } from '../common/abstract.buffer';
 import { IPInfo, IPRangeInfo } from '../common/interfaces';
 export declare class QQWryUtil {
     static REDIRECT_MODE_1: number;

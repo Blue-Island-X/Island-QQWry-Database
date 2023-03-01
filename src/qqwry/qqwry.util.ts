@@ -1,6 +1,6 @@
 import * as gbk from 'gbk.js';
 
-import { AbstractBuffer } from '../common/abstract_buffer';
+import { AbstractBuffer } from '../common/abstract.buffer';
 import { IPInfo, IPRangeInfo } from '../common/interfaces';
 
 export class QQWryUtil {

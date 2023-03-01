@@ -1,4 +1,4 @@
-import { AbstractBuffer } from '../common/abstract_buffer';
+import { AbstractBuffer } from '../common/abstract.buffer';
 export declare class QQWryClient {
     path: string;
     buffer: InstanceType<typeof AbstractBuffer>;

@@ -25,9 +25,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.QQWryClient = void 0;
 const path = __importStar(require("path"));
-const file_buffer_1 = require("../buffer/file_buffer");
-const memory_buffer_1 = require("../buffer/memory_buffer");
-const qqwry_util_1 = require("./qqwry_util");
+const file_buffer_1 = require("../buffer/file.buffer");
+const memory_buffer_1 = require("../buffer/memory.buffer");
+const qqwry_util_1 = require("./qqwry.util");
 class QQWryClient {
     constructor(speed, dataPath) {
         this.path = dataPath || path.join(__dirname, '..', '..', 'data', 'qqwry.dat');

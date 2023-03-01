@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-import { AbstractBuffer } from '../common/abstract_buffer';
+import { AbstractBuffer } from '../common/abstract.buffer';
 
 export class MemoryBuffer implements AbstractBuffer {
     buffer: Buffer;
