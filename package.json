@@ -1,6 +1,6 @@
 {
   "name": "@blueislandx/island-qqwry-database",
-  "version": "2023.2.22",
+  "version": "2023.3.1",
   "description": "Island (小蓝岛) 纯真 IP 数据库 qqwry.dat 解析",
   "main": "qqwry/index.js",
   "scripts": {
